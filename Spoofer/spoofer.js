@@ -62,6 +62,12 @@ const run = async () => {
         details.hddSerial = await executeCommand('wmic diskdrive get serialnumber');
         details.hddSerial = details.hddSerial.split('\n')[1];
 
+        details.ramSerial = await executeCommand('wmic memorychip get SerialNumber');
+        details.ramSerial = details.ramSerial.split('\n')[1];
+
+        details.gpuSerial = await executeCommand('wmic path win32_videocontroller get PNPDeviceID');
+        details.gpuSerial = details.gpuSerial.split('\n')[1];
+
         const macInfo = getMACAddress();
         if (macInfo) {
             details.currentMac = macInfo.mac;
