@@ -5,7 +5,8 @@ To use simply follow these steps:
 ```
 1. git clone https://github.com/jedi0313/lunarspoofer.git
 2. Open the lunarspoofer folder
-3. Run the runAsAdmin.bat
+3. npm install
+4. Run the runAsAdmin.bat
 ```
 
 ###
